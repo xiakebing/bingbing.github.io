@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      26
+      27
        分钟
     </span>
   
@@ -401,11 +401,157 @@ ul.right &gt; li.language &#123;
 &#125;
 ul.right &gt; li.language span &#123;
  font-size: 16px;
-  /* 给文字和图片同时设置 vertical-align: middle，使文字和图片在垂直方向上居中 */
+/* 给文字和图片同时设置 vertical-align: middle，使文字和图片在垂直方向上居中 */
   vertical-align: middle;
 &#125;
+ul.right &gt; li.language .arrow &#123;
+  /* 给文字和图片同时设置 vertical-align: middle，使文字和图片在垂直方向上居中 */
+  vertical-align: middle;
+  width: 12px;
+  height: 8px;
+&#125;
+ul.right &gt; li.contact &#123;
+  /* 设置 margin-top 调整 y 方向的位置 */
+  margin-top: 30px;
+&#125;
+/*上面是QQ注册页头部CSS*/
+ .main &#123;
+  height: 100%;
+  overflow: hidden;
+&#125;
+.bg &#123;
+  float: left;
+  width: 480px;
+  height: 100%;
+  background: url(http://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.11/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+&#125;
+.content &#123;
+  position: relative;
+  /* 使用 calc 时要注意，减号的两边要有空格 */
+  width: calc(100% - 480px);
+  margin-left: 480px;
+  height: 100%;
+  overflow: hidden;
+&#125;
+.core &#123;
+  width: 480px;
+  height: 571px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* 240px 是宽度的一半 */
+  margin-left: -240px;
+  /* 285.5px 是高度的一半 */
+  margin-top: -285.5px;
+&#125;
+h1 &#123;
+  font-size: 44px;
+  line-height: 62px;
+  font-weight: normal;
+&#125;
+.subtitle &#123;
+  margin-top: 13px;
+  height: 34px;
+&#125;
+h2 &#123;
+  font-size: 27px;
+  line-height: 34px;
+  font-weight: normal;
+  float: left;
+&#125;
+.free-bright &#123;
+  float: right;
+  font-size: 23px;
+  line-height: 34px;
+  color: #359eff;
+  cursor: pointer;
+&#125;
+form &#123;
+   margin-top: 63px;
+&#125;
+select,
+input &#123;
+  box-sizing: border-box;
+  width: 480px;
+  height: 52px;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  padding: 15px 20px;
+  font-size: 19px;
+&#125;
+.mobile,
+input.password &#123;
+  margin-top: 32px;
+&#125;
+.mobile &gt; select &#123;
+  width: 154px;
+  background-color: white;
+  outline: none;
+&#125;
+.mobile &gt; input &#123;
+  width: 307px;
+  float: right;
+&#125;
+::placeholder &#123;
+  color: #aaaaaa;
+  font-size: 19px;
+  font-weight: normal;
+&#125;
+ .mobile-tip &#123;
+  margin-top: 10px;
+  font-size: 13px;
+   ine-height: 14px;
+  color: #999;
+&#125;
+.submit &#123;
+  margin-top: 38px;
+  width: 480px;
+  box-sizing: border-box;
+  height: 60px;
+  background-color: #3487ff;
+  border: 1px solid #3083ff;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 8px rgba(24, 95, 255, 0.1);
+  border-radius: 4px;
+  outline: none;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 60px;
+  color: #ffffff;
+  cursor: pointer;
+&#125;
+.agreement &#123;
+  margin-top: 32px;
+  font-size: 13px;
+  line-height: 30px;
+  color: #aaaaaa;
+ &#125;
+.agreement &gt; input &#123;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+&#125;
+.agreement &gt; label &#123;
+  vertical-align: middle;
+&#125;
+footer &#123;
+  position: absolute;
+  width: 344px;
+  bottom: 26px;
+  /* 和模态框的居中一样，不过因为这里只需要考虑水平方向的居中，所以只需要设置 left 和 margin-left */
+  left: 50%;
+  margin-left: -172px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #bbbbbb;
+&#125;
 </code></pre>
-<p>   ul.right &gt; li.language .arrow {<br>      /* 给文字和图片同时设置 vertical-align: middle，使文字和图片在垂直方向上居中 <em>/<br>      vertical-align: middle;<br>      width: 12px;<br>      height: 8px;<br>    }<br>    ul.right &gt; li.contact {<br>      /</em> 设置 margin-top 调整 y 方向的位置 <em>/<br>      margin-top: 30px;<br>    }<br>    /<em>上面是QQ注册页头部CSS</em>/<br>     .main {<br>      height: 100%;<br>      overflow: hidden;<br>    }<br>    .bg {<br>      float: left;<br>      width: 480px;<br>      height: 100%;<br>      background: url(<a target="_blank" rel="noopener" href="http://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.11/bg.png">http://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.11/bg.png</a>);<br>      background-position: center;<br>      background-repeat: no-repeat;<br>      background-size: cover;<br>    }<br>    .content {<br>      position: relative;<br>      /</em> 使用 calc 时要注意，减号的两边要有空格 <em>/<br>      width: calc(100% - 480px);<br>      margin-left: 480px;<br>      height: 100%;<br>      overflow: hidden;<br>    }<br>    .core {<br>      width: 480px;<br>      height: 571px;<br>      position: absolute;<br>      left: 50%;<br>      top: 50%;<br>      /</em> 240px 是宽度的一半 <em>/<br>      margin-left: -240px;<br>      /</em> 285.5px 是高度的一半 <em>/<br>      margin-top: -285.5px;<br>    }<br>    h1 {<br>      font-size: 44px;<br>      line-height: 62px;<br>      font-weight: normal;<br>    }<br>    .subtitle {<br>      margin-top: 13px;<br>      height: 34px;<br>    }<br>    h2 {<br>      font-size: 27px;<br>      line-height: 34px;<br>      font-weight: normal;<br>      float: left;<br>    }<br>    .free-bright {<br>      float: right;<br>      font-size: 23px;<br>      line-height: 34px;<br>      color: #359eff;<br>      cursor: pointer;<br>    }<br>    form {<br>       margin-top: 63px;<br>    }<br>    select,<br>    input {<br>      box-sizing: border-box;<br>      width: 480px;<br>      height: 52px;<br>      border: 1px solid #aaaaaa;<br>      border-radius: 4px;<br>      padding: 15px 20px;<br>      font-size: 19px;<br>    }<br>    .mobile,<br>    input.password {<br>      margin-top: 32px;<br>    }<br>    .mobile &gt; select {<br>      width: 154px;<br>      background-color: white;<br>      outline: none;<br>    }<br>    .mobile &gt; input {<br>      width: 307px;<br>      float: right;<br>    }<br>    ::placeholder {<br>      color: #aaaaaa;<br>      font-size: 19px;<br>      font-weight: normal;<br>    }<br>     .mobile-tip {<br>      margin-top: 10px;<br>      font-size: 13px;<br>       ine-height: 14px;<br>      color: #999;<br>    }<br>    .submit {<br>      margin-top: 38px;<br>      width: 480px;<br>      box-sizing: border-box;<br>      height: 60px;<br>      background-color: #3487ff;<br>      border: 1px solid #3083ff;<br>      box-sizing: border-box;<br>      box-shadow: 0px 5px 8px rgba(24, 95, 255, 0.1);<br>      border-radius: 4px;<br>      outline: none;<br>      font-weight: 200;<br>      font-size: 24px;<br>      line-height: 60px;<br>      color: #ffffff;<br>      cursor: pointer;<br>    }<br>    .agreement {<br>      margin-top: 32px;<br>      font-size: 13px;<br>      line-height: 30px;<br>      color: #aaaaaa;<br>     }<br>    .agreement &gt; input {<br>      width: 18px;<br>      height: 18px;<br>      vertical-align: middle;<br>      padding: 0;<br>      margin: 0;<br>    }<br>    .agreement &gt; label {<br>      vertical-align: middle;<br>    }<br>    footer {<br>      position: absolute;<br>      width: 344px;<br>      bottom: 26px;<br>      /</em> 和模态框的居中一样，不过因为这里只需要考虑水平方向的居中，所以只需要设置 left 和 margin-left */<br>      left: 50%;<br>      margin-left: -172px;<br>      font-size: 14px;<br>      line-height: 20px;<br>      text-align: center;<br>      color: #bbbbbb;<br>    }</p>
 <p>4.QQ注册页面效果</p>
 <p><img src="/img/7.png" srcset="/img/loading.gif"></p>
 

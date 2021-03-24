@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      363 字
+      358 字
     </span>
   
 
@@ -251,21 +251,18 @@
 <p>  double x = 8.055;<br>  String s = String.format(“%.2f”, x);<br>  System.out.println( s );</p>
 </li>
 <li><p>创建Formatter类的对象</p>
-<p>  import java.util.Formatter//不要忘记在类外边倒入这个包！</p>
-<p>  Formatter a = new Formatter(System.out);<br>  double x = 9.566;<br>  a.format(“%.2f\n”, x);//9.57<br>  a.close();//关闭a    </p>
+<p>  import java.util.Formatter//不要忘记在类外边倒入这个包！<br>  Formatter a = new Formatter(System.out);<br>  double x = 9.566;<br>  a.format(“%.2f\n”, x);//9.57<br>  a.close();//关闭a    </p>
 </li>
 </ol>
 <h1 id="二、不四舍五入直接保留两位小数"><a href="#二、不四舍五入直接保留两位小数" class="headerlink" title="二、不四舍五入直接保留两位小数"></a><em>二、不四舍五入直接保留两位小数</em></h1><ol>
 <li><p>创建DecimalFormat类的对象</p>
-<p>  import java.text.DecimalFormat;//不要忘记导入包</p>
-<p>  DecimalFormat df = new DecimalFormat(“.00”);<br>  double x = 8.055;<br>  System.out.println(df.format(x));//8.05</p>
+<p>  import java.text.DecimalFormat;//不要忘记导入包<br>  DecimalFormat df = new DecimalFormat(“.00”);<br>  double x = 8.055;<br>  System.out.println(df.format(x));//8.05</p>
 </li>
 <li><p>创建NumberFormat对象</p>
-<p>  import java.text.NumberFormat;</p>
-<p>  NumberFormat nf = NumberFormat.getNumberInstance();<br>  nf.setMinimumFractionDigits(2);//不足两位自动补0，超过两位的部分不舍去<br>  double x = 8.055;<br>  double y = 8.5;<br>  System.out.println(nf.format(x));//8.055<br>  System.out.println(nf.format(y));//8.50</p>
+<p>  import java.text.NumberFormat;<br>  NumberFormat nf = NumberFormat.getNumberInstance();<br>  nf.setMinimumFractionDigits(2);//不足两位自动补0，超过两位的部分不舍去<br>  double x = 8.055;<br>  double y = 8.5;<br>  System.out.println(nf.format(x));//8.055<br>  System.out.println(nf.format(y));//8.50</p>
 </li>
 </ol>
-<h1 id="三、写保留两位小数的函数"><a href="#三、写保留两位小数的函数" class="headerlink" title="三、写保留两位小数的函数"></a><em>三、写保留两位小数的函数</em></h1><pre><code> double x=3.1465926;
+<h1 id="三、自己写保留两位小数的函数"><a href="#三、自己写保留两位小数的函数" class="headerlink" title="三、自己写保留两位小数的函数"></a><em>三、自己写保留两位小数的函数</em></h1><pre><code> double x=3.1465926;
   int a=(int)(x*100);
   System.out.println(a);
   if(x*1000-a*10&gt;5)&#123;
@@ -275,7 +272,7 @@
    double y=a/100.0;
    System.out.println(y);
 </code></pre>
-<p>ps: 以上我以保留两位小数举例，保留其它位数稍作改动即可，相信观者明白的。</p>
+<p>ps: 以上我以保留两位小数举例，保留其它位数稍作改动即可。</p>
 
             </div>
             <hr>

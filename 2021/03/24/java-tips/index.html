@@ -241,25 +241,30 @@
               <p>今天突然想起在Java中我还不知道如何保留小数，于是在网上进行搜索进行了整理，保留一下。</p>
 <span id="more"></span>
 <h1 id="一、四舍五入并保留小数点后两位"><a href="#一、四舍五入并保留小数点后两位" class="headerlink" title="一、四舍五入并保留小数点后两位"></a><em>一、四舍五入并保留小数点后两位</em></h1><ol>
-<li><p>printf()<br>  double x=9.566<br>  System.out.printf(“%.2f\n”,x);//9.57</p>
+<li><p>printf()</p>
+<p> double x=9.566<br> System.out.printf(“%.2f\n”,x);//9.57</p>
 </li>
-<li><p>format()<br>  double x=9.566;<br>  System.out.format(“%.2f”,x);//9.57</p>
+<li><p>format()</p>
+<p> double x=9.566;<br> System.out.format(“%.2f”,x);//9.57</p>
 </li>
-<li><p>format()方法将double型转换为String型再输出<br>  double x = 8.055;<br>  String s = String.format(“%.2f”, x);<br>  System.out.println( s );</p>
+<li><p>format()方法将double型转换为String型再输出</p>
+<p> double x = 8.055;<br> String s = String.format(“%.2f”, x);<br> System.out.println( s );</p>
 </li>
-<li><p>创建Formatter类的对象<br>  import java.util.Formatter//不要忘记在类外边倒入这个包！<br>  Formatter a = new Formatter(System.out);<br>  double x = 9.566;<br>  a.format(“%.2f\n”, x);//9.57<br>  a.close();//关闭a    </p>
+<li><p>创建Formatter类的对象<br> import java.util.Formatter//不要忘记在类外边倒入这个包！<br> Formatter a = new Formatter(System.out);<br> double x = 9.566;<br> a.format(“%.2f\n”, x);//9.57<br> a.close();//关闭a    </p>
 </li>
 </ol>
 <h1 id="二、不四舍五入直接保留两位小数"><a href="#二、不四舍五入直接保留两位小数" class="headerlink" title="二、不四舍五入直接保留两位小数"></a><em>二、不四舍五入直接保留两位小数</em></h1><ol>
-<li><p>创建DecimalFormat类的对象<br> import java.text.DecimalFormat;//不要忘记导入包<br>  DecimalFormat df = new DecimalFormat(“.00”);<br>  double x = 8.055;<br>  System.out.println(df.format(x));//8.05</p>
+<li><p>创建DecimalFormat类的对象</p>
+<p> import java.text.DecimalFormat;//不要忘记导入包<br> DecimalFormat df = new DecimalFormat(“.00”);<br> double x = 8.055;<br> System.out.println(df.format(x));//8.05</p>
 </li>
-<li><p>创建NumberFormat对象<br>  import java.text.NumberFormat;<br>  NumberFormat nf = NumberFormat.getNumberInstance();<br>  nf.setMinimumFractionDigits(2);//不足两位自动补0，超过两位的部分不舍去<br>  double x = 8.055;<br>  double y = 8.5;<br>  System.out.println(nf.format(x));//8.055<br>  System.out.println(nf.format(y));//8.50</p>
+<li><p>创建NumberFormat对象</p>
+<p> import java.text.NumberFormat;<br> NumberFormat nf = NumberFormat.getNumberInstance();<br> nf.setMinimumFractionDigits(2);//不足两位自动补0，超过两位的部分不舍去<br> double x = 8.055;<br> double y = 8.5;<br> System.out.println(nf.format(x));//8.055<br> System.out.println(nf.format(y));//8.50</p>
 </li>
 </ol>
-<h1 id="三、自己写保留两位小数的函数"><a href="#三、自己写保留两位小数的函数" class="headerlink" title="三、自己写保留两位小数的函数"></a><em>三、自己写保留两位小数的函数</em></h1><pre><code> double x=3.1465926;
-  int a=(int)(x*100);
-  System.out.println(a);
-  if(x*1000-a*10&gt;5)&#123;
+<h1 id="三、自己写保留两位小数的函数"><a href="#三、自己写保留两位小数的函数" class="headerlink" title="三、自己写保留两位小数的函数"></a><em>三、自己写保留两位小数的函数</em></h1><pre><code>double x=3.1465926;
+ int a=(int)(x*100);
+ System.out.println(a);
+ if(x*1000-a*10&gt;5)&#123;
         a=a+1;
    &#125;//这是进行四舍五入，若直接去掉两位小数后的数，就不用添加
    System.out.println(a);
